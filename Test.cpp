@@ -53,15 +53,15 @@ TEST_CASE("Real veriables X^2 equations"){
     CHECK(solve((x^2) + 2*x + 1 == 0) == -1.0 );
     CHECK(solve((x^2) -2*x + 1 == 0) == 1.0 );
     CHECK(solve((x^2)  == 4) == 2.0);
-    CHECK(solve((x^2)  == 9) == 3 );//|| solve((x^2)  == 9) == -3);
-    CHECK(solve((x^2) + 16 == 0) == 4 );//|| solve((x^2) + 16  == 0) == -4);
-    CHECK(solve((x^2) - 6*x + 9  == 0 == 3) );//|| solve((x^2) - 6*x + 9  == 0) == -3);
-    CHECK(solve((x^2) + 16 == 0) == 4);// || solve((x^2) + 16  == 0) == -4);
-    CHECK(solve((2*x^2) -4*x - 6 == 0) == -1);// || solve((2*x^2) -4*x - 6 == 0) == 3);
-    CHECK(solve((2*x^2) -4*x == 0) == 0);// || solve((2*x^2) -4*x == 0) == 2);
-    CHECK(solve((3*x^2) +6*x == 0) == 0 );//|| solve((3*x^2) + 6*x == 0) == 2);
-    CHECK(solve((x^2) - x == 0) == 1);// || solve((x^2) - x == 0) == 0);
-    CHECK(solve((x^2) == 9) == 3);// || solve((x^2) == 9) == -3);   
+    CHECK((solve((x^2)  == 9) == 3 || solve((x^2)  == 9) == -3));
+    CHECK((solve((x^2) + 16 == 0) == 4 || solve((x^2) + 16  == 0) == -4));
+    CHECK((solve((x^2) - 6*x + 9  == 0 == 3) || solve((x^2) - 6*x + 9  == 0) == -3));
+    CHECK((solve((x^2) + 16 == 0) == 4 || solve((x^2) + 16  == 0) == -4));
+    CHECK((solve(2*(x^2) -4*x - 6 == 0) == -1 || solve(2*(x^2) -4*x - 6 == 0) == 3));
+    CHECK((solve(2*(x^2) -4*x == 0) == 0 || solve(2*(x^2) -4*x == 0) == 2));
+    CHECK((solve((3*x^2) +6*x == 0) == 0 || solve((3*x^2) + 6*x == 0) == 2));
+    CHECK((solve((x^2) - x == 0) == 1 || solve((x^2) - x == 0) == 0));
+    CHECK((solve((x^2) == 9) == 3 || solve((x^2) == 9) == -3));   
     
 }
 
